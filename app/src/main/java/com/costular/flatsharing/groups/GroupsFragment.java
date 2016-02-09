@@ -23,6 +23,7 @@ import com.costular.flatsharing.data.GroupDataCached;
 import com.costular.flatsharing.data.Repository;
 import com.costular.flatsharing.group_detail.GroupDetailActivity;
 import com.costular.flatsharing.util.AutofitRecyclerView;
+import com.costular.flatsharing.util.SpacesItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -83,6 +84,7 @@ public class GroupsFragment extends Fragment implements GroupsContract.MyView {
         int numColumns = getContext().getResources().getInteger(R.integer.num_groups_colmumns);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), numColumns));
+        recyclerView.addItemDecoration(SpacesItemDecoration.newInstance(4));
         adapter = new GroupsAdapter(new ArrayList<Group>(0), new GroupsAdapter.GroupActionListener() {
             @Override
             public void groupClicked(Group group) {

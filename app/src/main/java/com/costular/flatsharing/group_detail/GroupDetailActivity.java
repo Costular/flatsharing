@@ -1,6 +1,7 @@
 package com.costular.flatsharing.group_detail;
 
 import android.app.VoiceInteractor;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -30,6 +31,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.costular.flatsharing.BaseActivity;
 import com.costular.flatsharing.R;
 import com.costular.flatsharing.data.Group;
+import com.costular.flatsharing.group_detail.settings.GroupSettingsActivity;
 import com.costular.flatsharing.util.ImageUtil;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
@@ -90,6 +92,7 @@ public class GroupDetailActivity extends BaseActivity {
 
         switch (id) {
             case R.id.action_settings:
+                openGroupSettings();
                 return true;
             case R.id.action_leave_group:
                 askLeaveGroup();
@@ -97,6 +100,14 @@ public class GroupDetailActivity extends BaseActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void openGroupSettings() {
+        Intent intent = new Intent(this, GroupSettingsActivity.class);
+        Bundle extras = new Bundle();
+        extras.putParcelable(GroupSettingsActivity.PARAM_GROUP, group);
+        intent.putExtras(extras);
+        startActivity(intent);
     }
 
     private void askLeaveGroup() {

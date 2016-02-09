@@ -8,4 +8,6 @@
     <color name="primaryTextColor">#212121</color>
     <color name="secondaryTextColor">#727272</color>
     <color name="inverseSecondaryTextColor">#B3FFFFFF</color>
+
+    <color name="secondaryBackgroundColor">#eeeeee</color>
 </resources>

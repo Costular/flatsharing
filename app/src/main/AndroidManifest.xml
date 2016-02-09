@@ -38,6 +38,9 @@
         <activity android:name=".group_detail.economy.add_transaction.AddTransactionActivity">
 
         </activity>
+        <activity android:name=".group_detail.settings.GroupSettingsActivity">
+
+        </activity>
 
     </application>
 
