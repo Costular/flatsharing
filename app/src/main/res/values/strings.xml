@@ -50,7 +50,7 @@
     <string name="add_transaction_subject">Concepto</string>
     <string name="add_transaction_subtitle_subject">Concepto</string>
     <string name="dialog_leave_group_title">¿Estás seguro de salir del grupo?</string>
-    <string name="dialog_leave_group_description">No podrás volver a entrar si sales.</string>
+    <string name="dialog_leave_group_description">No podrás volver a entrar si abandonas.</string>
     <string name="decline">No</string>
     <string name="agree">Sí</string>
 </resources>
